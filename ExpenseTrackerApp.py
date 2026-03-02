@@ -28,7 +28,7 @@ if 'budget' not in st.session_state:
 
 st.title("Expense Tracker")
 st.write("By Ali Ahmed and Rizwan Ahmed")
-choice = st.sidebar.selectbox("Menu",["Set Budget","Add Expense","Remove Expense","Show Goals","Add Goal","Remove Goal","Show Expense"])
+choice = st.sidebar.selectbox("Menu",["Set Budget","Add Expense","Remove Expense","Show Goals","Add Goal","Remove Goal","Show Expenses"])
 
 if choice=="Show Expenses":
     total=0
@@ -96,6 +96,7 @@ elif choice=="Set Budget":
     if st.button("Update"):
         st.session_state.budget=int(new_budget)
         st.write("Budget updated to Rs "+str(st.session_state.budget))
+
 
 
 
