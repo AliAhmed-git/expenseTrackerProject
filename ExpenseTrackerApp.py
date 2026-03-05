@@ -12,11 +12,7 @@ class Goal:
 
 
 if 'expenses' not in st.session_state:
-    st.session_state.expenses = [Expense('Breakfast', 200),Expense('Rent', 1000),
-        Expense('Electricity Bill', 5000),
-    Expense('Parking', 100),Expense('Grocery', 750),
-        Expense('Fruit', 100),
-    Expense('Gas Bill', 2000),Expense('Internet', 1000)]
+    st.session_state.expenses = []
 
 if 'goals' not in st.session_state:
     st.session_state.goals = [Goal('Car', 700000),Goal('Bike', 50000),Goal('Phone', 30000),
@@ -96,6 +92,7 @@ elif choice=="Set Budget":
     if st.button("Update"):
         st.session_state.budget=int(new_budget)
         st.write("Budget updated to Rs "+str(st.session_state.budget))
+
 
 
 
